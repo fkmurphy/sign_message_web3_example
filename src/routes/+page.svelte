@@ -20,9 +20,10 @@
 
 </script>
 
-<div class="h-screen w-full py-10 px-8 flex flex-col justify-between">
+<div class="h-screen w-full py-10 px-8 flex flex-col">
+    <div class="flex-1 flex flex-col justify-between">
     <header>
-        <h1 class="text-center text-4xl text-yellow-200">Herramienta de firma con wallet integrada</h1>
+        <h1 class="text-center text-4xl text-blue-500 dark:text-yellow-200">Herramienta de firma con wallet integrada</h1>
         <h2 class="text-center text-lg">Conecte su wallet para firmar un mensaje y obtener los datos para registrar su wallet en BFA</h2>
     </header>
     {#if $wallets?.[0]?.provider }
@@ -39,7 +40,7 @@
         </div>
     {/if}
     <section class="flex flex-col align-center justify-center mx-auto space-y-6">
-        <h3 class="text-center text-2xl text-yellow-200">Para qué todo esto?</h3>
+        <h3 class="text-center text-2xl text-blue-500 dark:text-yellow-200">Para qué todo esto?</h3>
         <ul class="space-y-2 justify-center">
             <li class="flex items-center">
                 <svg class="w-3.5 h-3.5 mr-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -61,4 +62,10 @@
             </li>
         </ul>
     </section>
+    </div>
+    <footer class="text-sm text-center text-gray-400 dark:text-gray-600 mt-20">
+        <p>El sitio y la herramienta fueron desarrollados por Julian Murphy, no forma parte de BFA ni es una herramienta derivada de algún software oficial.</p>
+        <p>Licencia MIT.</p>
+        <a class="hover:text-gray-800 dark:hover:text-gray-100" href="https://github.com/fkmurphy/sign_message_web3_example">Puede conocer el código y reutilizarlo - Repositiorio de Github.</a>
+    </footer>
 </div>

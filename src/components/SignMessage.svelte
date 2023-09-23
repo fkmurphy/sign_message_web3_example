@@ -42,8 +42,9 @@
         <label for="message" class="block mb-2 text-md font-medium text-gray-900 dark:text-gray-400">Si desea, ingrese un mensaje a firmar <span class="text-red-400 text-sm"> (es opcional) </span></label>
         <textarea bind:value={message} id="message" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
     </div>
+    <div class="mt-5">
     {#if error === undefined && !loading}
-        <button on:click={sign} class="mt-5 text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 mb-2">
+        <button on:click={sign} class="text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 mb-2">
             Haga click para firmar
         </button>
     {:else if loading }
@@ -57,9 +58,10 @@
     {:else}
         <p class="text-sm text-red-400">{error}</p>
     {/if}
+    </div>
     <label class="mt-8 block mb-2 text-md font-medium text-gray-900 dark:text-gray-400">Firma:
     <textarea bind:value={signature} disabled rows="4" class="mt-2 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Aquí aparecerá la firma"></textarea></label>
-    <div class="mt-2 text-sm text-gray-300 dark:text-gray-500">
+    <div class="mt-2 text-sm text-gray-500">
         <p>Wallet conectada:</p>
         <p>{wallet}</p>
         
