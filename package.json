@@ -26,5 +26,11 @@
 	"dependencies": {
 		"@web3-onboard/core": "^2.21.2",
 		"@web3-onboard/injected-wallets": "^2.10.6"
-	}
+	},
+    "packages": {
+        "rxjs/operators" : {
+            "main": "index.js",
+            "defaultExtension": "js"
+        }
+    }
 }
