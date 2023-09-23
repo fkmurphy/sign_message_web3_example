@@ -1,10 +1,9 @@
 <script>
     import { onMount, afterUpdate } from 'svelte';
     import { ethers } from 'ethers'
-    export let wallets
-    export let onboard
+    export let wallets;
 
-    let wallet
+    let wallet;
     let signature = "";
     let message = "";
     let error;

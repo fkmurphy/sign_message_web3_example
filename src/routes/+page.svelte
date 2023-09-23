@@ -21,7 +21,7 @@
         <h2 class="text-center text-lg">Conecte su wallet para firmar un mensaje y obtener los datos para registrar su wallet en BFA</h2>
     </header>
     {#if $wallets?.[0]?.provider }
-        <SignMessage onboard={onboard} wallets={wallets} />
+        <SignMessage wallets={wallets} />
 
     {:else}
         <div class="justify-center text-center">
