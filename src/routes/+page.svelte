@@ -1,4 +1,8 @@
+
 <script lang="ts">
+    export const config = {
+        runtime: 'edge'
+    };
     import onboard from '../lib/wallet_manager';
     import injectedModule from '@web3-onboard/injected-wallets'
     import SignMessage from '../components/SignMessage.svelte'
